@@ -1,10 +1,12 @@
 # Authored by Bruce https://github.com/brootware
-function Verify-Hash {
+function Check-Hash{
+    [CmdletBinding()]
     param(
         [string]$hash_algo,
         [string]$file,
         [string]$source_hash
     )
+
     $RED = [ConsoleColor]::Red
     $GREEN = [ConsoleColor]::Green
 
