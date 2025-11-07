@@ -28,4 +28,4 @@ function Check-Hash{
     }
 }
 
-Export-ModuleMember -Function Verify-Hash
+Export-ModuleMember -Function Check-Hash
