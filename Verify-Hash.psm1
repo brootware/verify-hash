@@ -1,5 +1,5 @@
-
-function Verify-hash {
+# Authored by Bruce https://github.com/brootware
+function Verify-Hash {
     param(
         [string]$hash_algo,
         [string]$file,
@@ -7,17 +7,6 @@ function Verify-hash {
     )
     $RED = [ConsoleColor]::Red
     $GREEN = [ConsoleColor]::Green
-
-    # if ($args.Length -eq 1) {
-    #     if ($args[0] -eq '-h' -or $args[0] -eq '--help') {
-    #         Write-Host "Usage: $($MyInvocation.MyCommand.Name) <hash_algo> <file> <source_hash>"
-    #         Write-Host "- hash: One of the 'sum' family, like [sha1, sha224, sha256, sha384, sha512, md5]."
-    #         Write-Host "- file: The filename to compute the hash validity."
-    #         Write-Host "- given_key: The hash key that should match the computed one."
-    #         Write-Host "Please note that the pattern matching is case insensitive."
-    #         exit
-    #     }
-    # }
 
     if ($args.Length -ne 3) {
         Write-Host "Illegal parameters: run '$($MyInvocation.MyCommand.Name) -h' for usage."
@@ -37,3 +26,4 @@ function Verify-hash {
     }
 }
 
+Export-ModuleMember -Function Verify-Hash
